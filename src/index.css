@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 38% 90%;
+    --foreground: 0 0% 10%;
+    --card: 40 20% 97%;
+    --card-foreground: 0 0% 10%;
+    --popover: 40 20% 97%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 30 52% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 20% 97%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 30 52% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 10% 85%;
+    --input: 40 10% 85%;
+    --ring: 30 52% 50%;
+    --radius: 0.625rem;
+    
+    /* Custom brand colors */
+    --cream-vanilla: #F2EED8;
+    --cream-soft: #F8F6F0;
+    --brown-warm: #C2783C;
+    --brown-dark: #8B5A3C;
+    --brown-rich: #5C3D2E;
+    --gold: #D4A574;
+    --zomato: #CB202D;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cream-vanilla text-foreground font-body antialiased;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brown-warm text-white px-8 py-4 rounded-full font-semibold 
+           transition-all duration-300 hover:bg-brown-dark hover:scale-[1.02]
+           focus:outline-none focus:ring-2 focus:ring-brown-warm focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-full font-semibold
+           transition-all duration-300 hover:bg-gray-900 hover:text-white;
+  }
+  
+  .btn-zomato {
+    @apply bg-zomato text-white px-8 py-4 rounded-full font-semibold 
+           transition-all duration-300 hover:bg-red-700 hover:scale-[1.02]
+           focus:outline-none focus:ring-2 focus:ring-zomato focus:ring-offset-2;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-brown-warm to-brown-dark bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2000ms;
+  }
+  .animation-delay-3000 {
+    animation-delay: 3000ms;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4000ms;
+  }
+  .animation-delay-5000 {
+    animation-delay: 5000ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-vanilla);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brown-warm);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brown-dark);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(194, 120, 60, 0.3);
+}
