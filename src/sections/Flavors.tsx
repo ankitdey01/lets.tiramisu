@@ -39,17 +39,17 @@ const flavors = [
 
 export function Flavors() {
   return (
-    <section id="flavors" className="section-padding bg-cream-vanilla">
+    <section id="flavors" className="section-padding bg-cream-vanilla dark:bg-gray-900 transition-colors duration-300">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black dark:text-gray-100 mb-4">
               Four Flavors, Endless Bliss
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Each crafted with love, using only the finest ingredients
             </p>
           </ScrollReveal>

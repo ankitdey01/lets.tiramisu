@@ -13,11 +13,11 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-cream-vanilla">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-cream-vanilla dark:bg-gray-900 transition-colors duration-300">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-brown-warm/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 opacity-30 dark:opacity-20">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-brown-warm/10 dark:bg-amber-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold/10 dark:bg-amber-400/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container-custom relative z-10 pt-24 pb-16">
@@ -43,15 +43,15 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-4"
             >
-              <span className="flex items-center justify-center lg:justify-start gap-3 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-rich-black">
+              <span className="flex items-center justify-center lg:justify-start gap-3 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-rich-black dark:text-gray-100">
                 <Heart className="w-8 h-8 md:w-10 md:h-10 text-red-500 fill-red-500 animate-heart-beat" />
                 <span>Let's</span>
                 <Heart className="w-8 h-8 md:w-10 md:h-10 text-red-500 fill-red-500 animate-heart-beat" />
               </span>
-              <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-brown-warm mt-2">
+              <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-brown-warm dark:text-amber-500 mt-2">
                 Tiramisu.
               </span>
-              <span className="block text-lg md:text-xl font-body font-medium text-gray-500 mt-2 tracking-widest">
+              <span className="block text-lg md:text-xl font-body font-medium text-gray-500 dark:text-gray-400 mt-2 tracking-widest">
                 SINCE 2025
               </span>
             </motion.h1>
@@ -60,7 +60,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-xl md:text-2xl font-display text-brown-dark mb-4"
+              className="text-xl md:text-2xl font-display text-brown-dark dark:text-amber-400 mb-4"
             >
               Opening Valentine's Day 2026
             </motion.p>
@@ -69,7 +69,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg md:text-xl text-gray-600 mb-2"
+              className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-2"
             >
               Indulge in Artisanal Italian Bliss
             </motion.p>

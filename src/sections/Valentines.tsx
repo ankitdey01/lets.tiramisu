@@ -30,9 +30,9 @@ export function Valentines() {
   };
 
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="section-padding relative overflow-hidden bg-cream-vanilla dark:bg-gray-900 transition-colors duration-300">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cream-vanilla via-cream-vanilla to-pink-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cream-vanilla dark:from-gray-900 via-cream-vanilla dark:via-gray-800 to-pink-50 dark:to-gray-900" />
       
       {/* Heart Pattern Overlay */}
       <div className="absolute inset-0 opacity-5">
@@ -64,20 +64,20 @@ export function Valentines() {
             </ScrollReveal>
 
             <ScrollReveal direction="left" delay={0.1}>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black dark:text-gray-100 mb-6">
                 Celebrate Love with Tiramisu
               </h2>
             </ScrollReveal>
 
             <ScrollReveal direction="left" delay={0.2}>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
+              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 This Valentine's Day, say 'I love you' with layers of sweetness.
               </p>
             </ScrollReveal>
 
             <ScrollReveal direction="left" delay={0.3}>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8">
-                <p className="text-sm font-medium text-brown-warm uppercase tracking-wider mb-2">
+              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 mb-8">
+                <p className="text-sm font-medium text-brown-warm dark:text-amber-500 uppercase tracking-wider mb-2">
                   Opening February 14th, 2026
                 </p>
                 <p className="text-base text-gray-600">

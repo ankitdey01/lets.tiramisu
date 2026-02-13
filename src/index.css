@@ -34,6 +34,48 @@
     --gold: #D4A574;
     --zomato: #CB202D;
   }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 30 15% 15%;
+      --foreground: 40 10% 95%;
+      --card: 30 20% 22%;
+      --card-foreground: 40 10% 95%;
+      --popover: 30 20% 22%;
+      --popover-foreground: 40 10% 95%;
+      --primary: 38 72% 55%;
+      --primary-foreground: 30 15% 15%;
+      --secondary: 30 20% 22%;
+      --secondary-foreground: 40 10% 95%;
+      --muted: 30 15% 35%;
+      --muted-foreground: 40 10% 60%;
+      --accent: 38 72% 55%;
+      --accent-foreground: 30 15% 15%;
+      --border: 30 15% 30%;
+      --input: 30 15% 30%;
+      --ring: 38 72% 55%;
+    }
+  }
+
+  html.dark {
+    --background: 30 15% 15%;
+    --foreground: 40 10% 95%;
+    --card: 30 20% 22%;
+    --card-foreground: 40 10% 95%;
+    --popover: 30 20% 22%;
+    --popover-foreground: 40 10% 95%;
+    --primary: 38 72% 55%;
+    --primary-foreground: 30 15% 15%;
+    --secondary: 30 20% 22%;
+    --secondary-foreground: 40 10% 95%;
+    --muted: 30 15% 35%;
+    --muted-foreground: 40 10% 60%;
+    --accent: 38 72% 55%;
+    --accent-foreground: 30 15% 15%;
+    --border: 30 15% 30%;
+    --input: 30 15% 30%;
+    --ring: 38 72% 55%;
+  }
 }
 
 @layer base {
@@ -46,8 +88,22 @@
   }
   
   body {
-    @apply bg-cream-vanilla text-foreground font-body antialiased;
+    @apply bg-cream-vanilla dark:bg-gray-950 text-foreground font-body antialiased transition-colors duration-300;
     overflow-x: hidden;
+  }
+
+  html.dark body {
+    @apply bg-gray-950;
+  }
+
+  html.dark {
+    --cream-vanilla: #1a1a1a;
+    --cream-soft: #2a2a2a;
+    --brown-warm: #E8A862;
+    --brown-dark: #D4956E;
+    --brown-rich: #C5845A;
+    --gold: #F5C794;
+    --zomato: #FF4757;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -59,18 +115,21 @@
   .btn-primary {
     @apply bg-brown-warm text-white px-8 py-4 rounded-full font-semibold 
            transition-all duration-300 hover:bg-brown-dark hover:scale-[1.02]
-           focus:outline-none focus:ring-2 focus:ring-brown-warm focus:ring-offset-2;
+           focus:outline-none focus:ring-2 focus:ring-brown-warm focus:ring-offset-2
+           dark:bg-amber-600 dark:hover:bg-amber-700 dark:focus:ring-amber-600;
   }
   
   .btn-secondary {
     @apply bg-transparent border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-full font-semibold
-           transition-all duration-300 hover:bg-gray-900 hover:text-white;
+           transition-all duration-300 hover:bg-gray-900 hover:text-white
+           dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-gray-900;
   }
   
   .btn-zomato {
     @apply bg-zomato text-white px-8 py-4 rounded-full font-semibold 
            transition-all duration-300 hover:bg-red-700 hover:scale-[1.02]
-           focus:outline-none focus:ring-2 focus:ring-zomato focus:ring-offset-2;
+           focus:outline-none focus:ring-2 focus:ring-zomato focus:ring-offset-2
+           dark:bg-red-600 dark:hover:bg-red-700;
   }
   
   .section-padding {
@@ -82,7 +141,8 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-brown-warm to-brown-dark bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brown-warm to-brown-dark bg-clip-text text-transparent
+           dark:from-amber-400 dark:to-amber-600;
   }
 }
 
@@ -137,7 +197,24 @@
   background: var(--brown-dark);
 }
 
+html.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #E8A862;
+  border-radius: 4px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #F5C794;
+}
+
 /* Selection color */
 ::selection {
   background: rgba(194, 120, 60, 0.3);
+}
+
+html.dark ::selection {
+  background: rgba(232, 168, 98, 0.4);
 }

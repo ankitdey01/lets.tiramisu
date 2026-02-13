@@ -13,12 +13,12 @@ const openingDetails = [
 
 export function Location() {
   return (
-    <section id="location" className="section-padding bg-white">
+    <section id="location" className="section-padding bg-white dark:bg-gray-800 transition-colors duration-300">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black dark:text-gray-100 mb-4">
               Join Us for the Grand Opening
             </h2>
           </ScrollReveal>
@@ -46,16 +46,16 @@ export function Location() {
               </motion.div>
 
               {/* Location */}
-              <div className="bg-cream-soft rounded-2xl p-6">
+              <div className="bg-cream-soft dark:bg-gray-700 rounded-2xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-brown-warm/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-brown-warm" />
+                  <div className="w-12 h-12 bg-brown-warm/10 dark:bg-amber-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-brown-warm dark:text-amber-500" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-semibold text-rich-black mb-1">
+                    <h3 className="text-xl font-display font-semibold text-rich-black dark:text-gray-100 mb-1">
                       Let's Tiramisu.
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 dark:text-gray-300">
                       Kalyani Central Park
                       <br />
                       Kalyani, West Bengal
@@ -66,7 +66,7 @@ export function Location() {
 
               {/* Opening Details */}
               <div>
-                <h4 className="text-lg font-display font-semibold text-rich-black mb-4">
+                <h4 className="text-lg font-display font-semibold text-rich-black dark:text-gray-100 mb-4">
                   Opening Day Details
                 </h4>
                 <div className="space-y-3">
