@@ -48,6 +48,7 @@ module.exports = {
           dark: '#8B5A3C',
           rich: '#5C3D2E',
         },
+        'rich-black': '#1a1a1a',
         flavor: {
           classic: '#5C3D2E',
           strawberry: '#E8A5A5',

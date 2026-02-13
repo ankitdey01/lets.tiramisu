@@ -12,13 +12,13 @@ const badges = [
 
 export function BrandStory() {
   return (
-    <section id="story" className="section-padding bg-white">
+    <section id="story" className="section-padding bg-white dark:bg-gray-800 transition-colors duration-300">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
           <ScrollReveal direction="left">
             <div className="relative">
-              <div className="absolute -top-4 -left-4 w-full h-full bg-cream-vanilla rounded-3xl" />
+              <div className="absolute -top-4 -left-4 w-full h-full bg-cream-vanilla dark:bg-gray-700 rounded-3xl" />
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.4 }}
@@ -36,14 +36,14 @@ export function BrandStory() {
           {/* Content */}
           <div>
             <ScrollReveal direction="right">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black dark:text-gray-100 mb-6">
                 Welcome to{' '}
-                <span className="text-brown-warm">Let's Tiramisu.</span>
+                <span className="text-brown-warm dark:text-amber-500">Let's Tiramisu.</span>
               </h2>
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.1}>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 At Let's Tiramisu, we believe that life's sweetest moments deserve the 
                 finest treats. Opening this Valentine's Day at Kalyani Central Park, 
                 we're bringing authentic, artisanal tiramisu to West Bengal - crafted 
@@ -52,7 +52,7 @@ export function BrandStory() {
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.2}>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
                 Each spoonful is a journey through layers of mascarpone cream, 
                 coffee-soaked ladyfingers, and pure indulgence. 100% vegetarian, 
                 100% delicious, 100% made for you.

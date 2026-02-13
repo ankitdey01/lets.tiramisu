@@ -13,13 +13,13 @@ const benefits = [
 
 export function Instagram() {
   return (
-    <section className="section-padding bg-cream-vanilla">
+    <section className="section-padding bg-cream-vanilla dark:bg-gray-900 transition-colors duration-300">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div>
             <ScrollReveal direction="left">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-rich-black dark:text-gray-100 mb-4">
                 Follow Our Sweet Journey
               </h2>
             </ScrollReveal>
@@ -29,7 +29,7 @@ export function Instagram() {
                 href="https://instagram.com/lets.tiramisu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-brown-warm hover:text-brown-dark transition-colors mb-6"
+                className="inline-flex items-center gap-2 text-brown-warm dark:text-amber-500 hover:text-brown-dark dark:hover:text-amber-400 transition-colors mb-6"
               >
                 <InstagramIcon className="w-6 h-6" />
                 <span className="text-xl font-medium">@lets.tiramisu</span>
@@ -37,7 +37,7 @@ export function Instagram() {
             </ScrollReveal>
 
             <ScrollReveal direction="left" delay={0.2}>
-              <p className="text-base text-gray-600 mb-6">
+              <p className="text-base text-gray-600 dark:text-gray-300 mb-6">
                 Follow us on Instagram for:
               </p>
             </ScrollReveal>
