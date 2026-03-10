@@ -1,73 +1,165 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🍰 lets.tiramisu
 
-Currently, two official plugins are available:
+### *A deliciously crafted web experience — rich, layered, and smooth.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-lets--tiramisu.vercel.app-a855f7?style=for-the-badge)](https://lets-tiramisu.vercel.app)
+[![TypeScript](https://img.shields.io/badge/TypeScript-97%25-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ What is this?
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**lets.tiramisu** is a modern, beautifully layered web app — just like the dessert it's named after. 🍫☕  
+Built with a cutting-edge stack, it's fast, smooth, and indulgent to use.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🔗 **Live:** [https://lets-tiramisu.vercel.app](https://lets-tiramisu.vercel.app)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧱 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| ⚡ Build Tool | [Vite 7](https://vite.dev) |
+| ⚛️ UI Framework | [React 19](https://react.dev) |
+| 🔷 Language | [TypeScript 5.9](https://www.typescriptlang.org) |
+| 🎨 Styling | [Tailwind CSS 3](https://tailwindcss.com) |
+| 🧩 UI Components | [shadcn/ui](https://ui.shadcn.com) + [Radix UI](https://radix-ui.com) |
+| 🎞️ Animations | [Framer Motion 12](https://www.framer.com/motion/) |
+| 📊 Charts | [Recharts](https://recharts.org) |
+| 📋 Forms | [React Hook Form](https://react-hook-form.com) + [Zod](https://zod.dev) |
+| 🎭 Icons | [Lucide React](https://lucide.dev) |
+| 🌙 Theming | [next-themes](https://github.com/pacocoursey/next-themes) |
+| 🚀 Deployment | [Vercel](https://vercel.com) |
+
+---
+
+## 📂 Project Structure
+
+```
+lets.tiramisu/
+├── 📁 src/
+│   ├── 📁 components/     # 🧩 Reusable UI components
+│   ├── 📁 sections/       # 📄 Page sections
+│   ├── 📁 hooks/          # 🪝 Custom React hooks
+│   ├── 📁 lib/            # 🔧 Utility functions
+│   ├── 🖥️  App.tsx         # Root component
+│   └── 🎨 index.css       # Global styles
+├── 📁 public/             # 🌍 Static assets
+├── 📁 dist/               # 📦 Production build output
+├── ⚙️  vite.config.ts      # Vite configuration
+├── 🎨 tailwind.config.js  # Tailwind configuration
+└── 📋 package.json        # Dependencies & scripts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- 🟢 **Node.js** v18+  
+- 📦 **npm** or your favourite package manager
+
+### Installation
+
+```bash
+# 📥 Clone the repository
+git clone https://github.com/ankitdey01/lets.tiramisu.git
+
+# 📂 Navigate into the project
+cd lets.tiramisu
+
+# 📦 Install dependencies
+npm install
 ```
+
+### Development
+
+```bash
+# 🔥 Start the dev server with Hot Module Replacement
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser. ✅
+
+### Build for Production
+
+```bash
+# 🏗️ Type-check and build
+npm run build
+
+# 👀 Preview the production build locally
+npm run preview
+```
+
+### Lint
+
+```bash
+# 🔍 Check code quality
+npm run lint
+```
+
+---
+
+## 🌈 Language Breakdown
+
+```
+TypeScript  ████████████████████░  ~97%  🔷
+JavaScript  █░░░░░░░░░░░░░░░░░░░░   ~2%  🟡
+CSS         ░░░░░░░░░░░░░░░░░░░░░   ~1%  🎨
+HTML        ░░░░░░░░░░░░░░░░░░░░░  <1%  🌐
+```
+
+---
+
+## 📦 Notable Dependencies
+
+| Package | Purpose |
+|---|---|
+| `framer-motion` 🎞️ | Smooth animations & transitions |
+| `recharts` 📊 | Beautiful data charts |
+| `react-hook-form` + `zod` 📋 | Type-safe form handling & validation |
+| `embla-carousel-react` 🎠 | Touch-friendly carousels |
+| `cmdk` ⌨️ | Command palette |
+| `sonner` 🔔 | Toast notifications |
+| `vaul` 🗂️ | Drawer component |
+| `date-fns` 📅 | Date utilities |
+| `lucide-react` 🎭 | Beautiful icons |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! 🎉
+
+1. 🍴 Fork the repository
+2. 🌿 Create a feature branch: `git checkout -b feature/my-awesome-feature`
+3. 💾 Commit your changes: `git commit -m 'feat: add something sweet 🍰'`
+4. 📤 Push to the branch: `git push origin feature/my-awesome-feature`
+5. 🔁 Open a Pull Request
+
+---
+
+## 👤 Author
+
+**ankitdey01**  
+🐙 GitHub: [@ankitdey01](https://github.com/ankitdey01)
+
+---
+
+<div align="center">
+
+Made with ❤️, ☕ and a whole lot of 🍰
+
+⭐ **Star this repo** if you like what you see!
+
+</div>
